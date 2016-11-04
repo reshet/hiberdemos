@@ -20,9 +20,6 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableTransactionManagement
-@ImportResource({
-
-})
 public class DatabaseConfig {
 
     @Value("${sarsdb.url}")
