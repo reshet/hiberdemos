@@ -33,6 +33,7 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.flywaydb:flyway-core:3.2.1')
+	compile group: 'org.postgresql', name: 'postgresql', version: '9.4-1201-jdbc41'
 	runtime('com.h2database:h2')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.dbunit:dbunit:2.4.9')

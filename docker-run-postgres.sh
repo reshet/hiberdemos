@@ -1,0 +1,1 @@
+docker run --publish 127.0.0.1:5432:5432 --name sars-postgres -e POSTGRES_USER=sars-core -e POSTGRES_PASSWORD=mybestdeal -d postgres
