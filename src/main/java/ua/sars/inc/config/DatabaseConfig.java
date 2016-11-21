@@ -73,7 +73,7 @@ public class DatabaseConfig {
 
     private Properties jpaProperties() {
         Properties properties = new Properties();
-        properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQL94Dialect");
+        properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQL95Dialect");
         properties.put("hibernate.hbm2ddl.auto", "validate");
         properties.put("hibernate.default_schema", "ofm");
 

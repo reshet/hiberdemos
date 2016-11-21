@@ -18,7 +18,8 @@ SET default_with_oids = false;
 
 
 CREATE TABLE offer_adjustment (
-    id bigint NOT NULL
+    id bigint NOT NULL,
+    offer_id bigint NOT NULL
 );
 
 ALTER TABLE offer_adjustment OWNER TO "sars-core";

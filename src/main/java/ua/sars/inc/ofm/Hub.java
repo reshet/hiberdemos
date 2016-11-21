@@ -4,10 +4,10 @@ package ua.sars.inc.ofm;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
-@Embeddable
+//@Embeddable
 public class Hub {
 
-    @Column(name = "code")
+    //@Column(name = "code")
     private String code;
 
     public Hub() {

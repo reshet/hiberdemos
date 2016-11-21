@@ -3,14 +3,12 @@ package ua.sars.inc.ofm;
 import java.util.Collection;
 import java.util.List;
 
+import javax.persistence.Embeddable;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+//@Embeddable
 public class RegionDefinition {
-
-    @GeneratedValue
-    @Id
-    private Long id;
 
     private Collection<Hub> hubs;
 
@@ -18,14 +16,6 @@ public class RegionDefinition {
 
     RegionDefinition(List<Hub> hubs) {
         this.hubs = hubs;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public Collection<Hub> getHubs() {
