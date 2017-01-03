@@ -19,10 +19,10 @@ public class OfferAdjustmentService {
 
 
     public void saveOfferAdjustment(Long offerDefinitionId, List<HubDTO> hubs) {
-        List<Hub> hubEntities = hubs.stream().map(OfferAdjustmentService::toHub).collect(Collectors.toList());
-        RegionDefinition rd = new RegionDefinition(hubEntities);
-        OfferAdjustment offerAdjustment = new OfferAdjustment(offerDefinitionId, rd);
-        em.persist(rd);
+        //List<Hub> hubEntities = hubs.stream().map(OfferAdjustmentService::toHub).collect(Collectors.toList());
+        //RegionDefinition rd = new RegionDefinition(hubEntities);
+        OfferAdjustment offerAdjustment = new OfferAdjustment(offerDefinitionId);
+        em.persist(offerAdjustment);
     }
     
     private static Hub toHub(HubDTO dto) {

@@ -1,7 +1,6 @@
 package ua.sars.inc.ofm;
 
 import javax.persistence.Column;
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -22,21 +21,11 @@ public class OfferAdjustment {
     @Column(name = "offer_id")
     private Long offerId;
 
-    public OfferAdjustment(Long offerId, RegionDefinition regionDefinition) {
+    public OfferAdjustment(Long offerId) {
         this.offerId = offerId;
-        //this.regionDefinition = regionDefinition;
     }
 
-    public OfferAdjustment() {
-    }
-
-//    public RegionDefinition getRegionDefinition() {
-//        return regionDefinition;
-//    }
-
-//    public void setRegionDefinition(RegionDefinition regionDefinition) {
-//        this.regionDefinition = regionDefinition;
-//    }
+    public OfferAdjustment() {}
 
     public Long getOfferId() {
         return offerId;
@@ -48,5 +37,9 @@ public class OfferAdjustment {
 
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

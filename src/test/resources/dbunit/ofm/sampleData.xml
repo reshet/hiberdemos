@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataset>
-    <offer_adjustment/>
-    <offer_adjustment/>
+    <offer_adjustment ID="1" OFFER_ID="22"/>
 </dataset>
