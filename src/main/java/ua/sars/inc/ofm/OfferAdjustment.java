@@ -21,7 +21,7 @@ public class OfferAdjustment {
     @Column(name = "offer_id")
     private Long offerId;
 
-    public OfferAdjustment(Long offerId) {
+    protected OfferAdjustment(Long offerId) {
         this.offerId = offerId;
     }
 
