@@ -3,6 +3,7 @@ package ua.sars.inc.ofm;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,9 +15,9 @@ public class OfferAdjustment {
 //    private RegionDefinition regionDefinition;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id")
-    private Long id;
+    protected Long id;
 
     @Column(name = "offer_id")
     private Long offerId;
@@ -37,9 +38,5 @@ public class OfferAdjustment {
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 }
