@@ -76,6 +76,7 @@ public class DatabaseConfig {
         properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQL95Dialect");
         properties.put("hibernate.hbm2ddl.auto", "validate");
         properties.put("hibernate.default_schema", "ofm");
+        properties.put("hibernate.id.new_generator_mappings", "true");
 
         return properties;
     }

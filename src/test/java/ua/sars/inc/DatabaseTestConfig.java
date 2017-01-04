@@ -42,11 +42,6 @@ public class DatabaseTestConfig {
     private String driverClassName;
 
     @Bean
-    public OfferAdjustmentService service() {
-        return new OfferAdjustmentService();
-    }
-
-    @Bean
     public DatabaseDataSourceConnectionFactoryBean dbUnitDatabaseConnection() {
         DatabaseDataSourceConnectionFactoryBean databaseDataSourceConnectionFactoryBean
             = new DatabaseDataSourceConnectionFactoryBean(dataSource());
@@ -89,6 +84,7 @@ public class DatabaseTestConfig {
         properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQL95Dialect");
         properties.put("hibernate.hbm2ddl.auto", "validate");
         properties.put("hibernate.default_schema", "ofm");
+        properties.put("hibernate.id.new_generator_mappings", "true");
 
         return properties;
     }
