@@ -13,13 +13,16 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Set;
 
+import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.FlushModeType;
 import javax.persistence.metamodel.ManagedType;
 import javax.persistence.metamodel.Metamodel;
 import javax.persistence.metamodel.Type;
 
 import ua.sars.inc.DatabaseTestConfig;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -44,6 +47,13 @@ public class MetaModelTest {
             Type.PersistenceType.ENTITY
         );
 
+    }
+
+    @Test
+    public void checks_flush_mode() {
+        EntityManager entityManager = em.createEntityManager();
+
+        assertThat(entityManager.getFlushMode()).isEqualTo(FlushModeType.AUTO);
     }
 
 }
