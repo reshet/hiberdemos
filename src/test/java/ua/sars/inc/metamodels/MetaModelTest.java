@@ -37,7 +37,7 @@ public class MetaModelTest {
     public void checks_managed_meta_models() {
         Metamodel mm = em.getMetamodel();
         Set<ManagedType<?>> managedTypes = mm.getManagedTypes();
-        assertEquals(managedTypes.size(), 1);
+        assertEquals(managedTypes.size(), 3);
         ManagedType itemType = managedTypes.iterator().next();
         assertEquals(
             itemType.getPersistenceType(),
